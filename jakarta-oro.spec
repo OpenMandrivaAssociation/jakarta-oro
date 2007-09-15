@@ -1,7 +1,7 @@
 %define name		jakarta-oro
 %define short_name	oro
 %define version		2.0.8
-%define release		2.5
+%define release		2.6
 %define section		free
 %define gcj_support	1
 
@@ -17,8 +17,6 @@ Source0:        %{name}-%{version}.tar.bz2
 BuildRequires:  jpackage-utils > 0:1.5
 BuildRequires:  ant
 %if %{gcj_support}
-Requires(post): java-gcj-compat
-Requires(postun): java-gcj-compat
 BuildRequires:  java-gcj-compat-devel
 %else
 BuildArch:      noarch
