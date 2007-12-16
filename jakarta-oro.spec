@@ -1,7 +1,7 @@
 %define name		jakarta-oro
 %define short_name	oro
 %define version		2.0.8
-%define release		3.0.1
+%define release		3.0.2
 %define section		free
 %define gcj_support	1
 
@@ -14,7 +14,7 @@ License:        Apache License
 Group:          Development/Java
 URL:            http://jakarta.apache.org/%{name}/
 Source0:        %{name}-%{version}.tar.bz2
-BuildRequires:  jpackage-utils > 0:1.5
+BuildRequires:  java-rpmbuild > 0:1.5
 BuildRequires:  ant
 %if %{gcj_support}
 BuildRequires:  java-gcj-compat-devel
