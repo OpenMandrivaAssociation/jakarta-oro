@@ -21,7 +21,6 @@ BuildRequires:  java-gcj-compat-devel
 %else
 BuildArch:      noarch
 %endif
-BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
 Obsoletes:      oro
 Provides:       oro = %{epoch}:%{version}-%{release}
 #Vendor:         JPackage Project
