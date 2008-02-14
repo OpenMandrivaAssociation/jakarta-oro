@@ -12,6 +12,7 @@ Epoch:		0
 Summary:        Full regular expressions API
 License:        Apache License
 Group:          Development/Java
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:            http://jakarta.apache.org/%{name}/
 Source0:        %{name}-%{version}.tar.bz2
 BuildRequires:  java-rpmbuild > 0:1.5
