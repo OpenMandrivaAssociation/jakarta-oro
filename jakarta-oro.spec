@@ -1,7 +1,7 @@
 %define name		jakarta-oro
 %define short_name	oro
 %define version		2.0.8
-%define release		3.0.3
+%define release		3.0.4
 %define section		free
 %define gcj_support	1
 
