@@ -1,6 +1,6 @@
 %define short_name	oro
 %define section		free
-%define gcj_support	1
+%define gcj_support	0
 
 Summary:        Full regular expressions API
 Name:           jakarta-oro
