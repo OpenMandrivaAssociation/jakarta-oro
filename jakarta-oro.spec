@@ -4,22 +4,21 @@
 
 Summary:        Full regular expressions API
 Name:           jakarta-oro
-Epoch:		0
 Version:        2.0.8
-Release:        3.0.10
+Release:        4
 License:        Apache License
 Group:          Development/Java
 Url:            http://jakarta.apache.org/%{name}/
 Source0:        %{name}-%{version}.tar.bz2
+%if !%{gcj_support}
+BuildArch:      noarch
+%else
+BuildRequires:  java-gcj-compat-devel
+%endif
 BuildRequires:  java-rpmbuild > 0:1.5
 BuildRequires:  java-1.6.0-openjdk-devel
 BuildRequires:  ant
-%if %{gcj_support}
-BuildRequires:  java-gcj-compat-devel
-%else
-BuildArch:      noarch
-%endif
-Provides:       oro = %{epoch}:%{version}-%{release}
+Provides:       oro = %{EVRD}
 
 %description
 The Jakarta-ORO Java classes are a set of text-processing Java classes
