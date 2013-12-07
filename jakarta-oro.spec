@@ -5,7 +5,7 @@
 Summary:        Full regular expressions API
 Name:           jakarta-oro
 Version:        2.0.8
-Release:        4
+Release:        5
 License:        Apache License
 Group:          Development/Java
 Url:            http://jakarta.apache.org/%{name}/
