@@ -33,11 +33,11 @@
 
 Name:           jakarta-oro
 Version:        2.0.8
-Release:        14.1%{?dist}
+Release:        16.1
 Epoch:          0
 Summary:        Full regular expressions API
 License:        ASL 1.1
-
+Group:		Development/Java
 Source0:        http://archive.apache.org/dist/jakarta/oro/%{name}-%{version}.tar.gz
 Source1:        MANIFEST.MF
 Source2:        http://repo1.maven.org/maven2/%{base_name}/%{base_name}/%{version}/%{base_name}-%{version}.pom
@@ -93,20 +93,12 @@ install -d -m 755 $RPM_BUILD_ROOT%{_mavenpomdir}
 install -p -m 644 %{SOURCE2} $RPM_BUILD_ROOT%{_mavenpomdir}/JPP-%{name}.pom
 %add_maven_depmap
 
-%pre javadoc
-# workaround for rpm bug, can be removed in F-18
-[ $1 -gt 1 ] && [ -L %{_javadocdir}/%{name} ] && \
-rm -rf $(readlink -f %{_javadocdir}/%{name}) %{_javadocdir}/%{name} || :
-
-%files
-%defattr(-,root,root)
+%files -f .mfiles
 %doc COMPILE ISSUES README TODO CHANGES CONTRIBUTORS LICENSE STYLE
-%{_javadir}/*.jar
-%{_mavenpomdir}/JPP-%{name}.pom
-%{_mavendepmapfragdir}/%{name}
+# symlink, not in .mfiles
+%{_javadir}/%{base_name}.jar
 
 %files javadoc
-%defattr(-,root,root)
 %doc LICENSE
 %{_javadocdir}/%{name}
 
