@@ -33,7 +33,7 @@
 
 Name:           jakarta-oro
 Version:        2.0.8
-Release:        16.2
+Release:        16.3
 Epoch:          0
 Summary:        Full regular expressions API
 License:        ASL 1.1
