@@ -42,7 +42,7 @@ Source0:        http://archive.apache.org/dist/jakarta/oro/%{name}-%{version}.ta
 Source1:        MANIFEST.MF
 Source2:        http://repo1.maven.org/maven2/%{base_name}/%{base_name}/%{version}/%{base_name}-%{version}.pom
 Patch1:         %{name}-build-xml.patch
-URL:            http://jakarta.apache.org/oro
+URL:            https://jakarta.apache.org/oro
 BuildRequires:  jpackage-utils > 1.6
 BuildRequires:  ant
 BuildArch:      noarch
